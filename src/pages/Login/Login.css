@@ -9,7 +9,7 @@
 }
 .login-form{
     text-align: center;
-    width: 500px;
+    width: 800px;
     padding: 25px;
     height: 400px;
     background: rgba(255, 255, 255, 0.1); /* Translucent white */
@@ -19,4 +19,5 @@
    border: 1px solid rgba(255, 255, 255, 0.3);
    color: white;
    border-radius: 20px ;
+
 }

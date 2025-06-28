@@ -1,39 +1,31 @@
-import React from 'react'
-import './Signup.css'
+import React from "react";
+import "./Signup.css";
+
 const Signup = () => {
-   return (
-    <div className="loginpage">
-      <form action="" className="login-form">
-        <h1>Signup</h1>
-        <div className="form-floating">
-  <input type="text" className="form-control" id="floatingname" placeholder="Name"/>
-  <label for="floatingName">Name</label>
-</div>
-<div className="form-floating ">
-  <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
-  <label for="email">Email address</label>
-</div>
-<div className="form-floating">
-  <input type="tel" className="form-control" id="floatingphone" placeholder="Mobile Number"/>
-  <label for="floatingPassword">Mobile Number</label>
-</div>
-<div className="form-floating">
-  <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-  <label for="floatingPassword">Create Password</label>
-  
-</div>
-<div className="form-floating">
-  <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-  <label for="floatingPassword">Confirm Password</label>
-  
-</div>
-
-
-<button className="btn btn-success w-50 d-block mx-auto">Login</button>
+  return (
+    <div className="signup-page">
+      <form className="signup-form">
+        <h2>Sign Up</h2>
+        <div className="form-group">
+          <label htmlFor="signup-name">Name</label>
+          <input type="text" id="signup-name" placeholder="Your Name" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="signup-email">Email</label>
+          <input type="email" id="signup-email" placeholder="you@example.com" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="signup-phone">Phone</label>
+          <input type="tel" id="signup-phone" placeholder="Your Phone Number" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="Create Password" required />
+        </div>
+        <button type="submit" className="signup-btn">Sign Up</button>
       </form>
-     
     </div>
-  )
-}
+  );
+};
 
 export default Signup;
