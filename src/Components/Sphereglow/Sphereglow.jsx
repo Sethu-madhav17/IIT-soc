@@ -1,5 +1,5 @@
 import React from 'react';
-import './SphereGlow.css';
+import './Sphereglow.css';
 import Typewriter from '../Typewriter/Typewriter';
 
 const spheres = [
