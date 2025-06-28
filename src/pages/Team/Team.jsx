@@ -99,7 +99,7 @@ const teamMembers = [
 
 const Team = () => (
   <div className="cardbox">
-    <h1 style={{ textAlign: "center", marginBottom: "32px" , fontWeight:"bold" ,backgroundColor:"white" ,width:"fit-content",padding:"10px" }}>Our Team</h1>
+    <h1 style={{ textAlign: "center", marginBottom: "32px" , fontWeight:"bold" ,backgroundColor:"white" ,width:"fit-content",padding:"10px" }}>Team Alumni Cell</h1>
      <div className="cards">
         <div className="card" >
     {teamMembers.map((member, idx) => (

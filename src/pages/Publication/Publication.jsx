@@ -1,38 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Publication.css";
-
+import Magazine from "../Magazine/Magazine";
+import Newsletter from "../Newsletter/Newsletter";
 const imageLinks = [
   {
-    src: "/Media/pod.png",
+    src: "/Media/podbuild.jpg",
     alt: "Newsletter",
     to: "/Newsletter",
     linkText: "Newsletter",
   },
   {
-    src: "/Media/pod.png",
+    src: "/Media/iitiabhi1.jpg",
     alt: "Yearbook",
     to: "/Yearbook",
     linkText: "Yearbook",
   },
   {
-    src: "Media/pod.png",
+    src: "Media/magazine.jpg",
     alt: "Magazine",
-    to: "/Magazine",
-    linkText: "Magazine",
+    to: "../Magazine",
+    linkText: "Alumni Magazine",
   },
    {
-    src: "Media/pod.png",
-    alt: "webinars",
-    to: "/webinars",
-    linkText: "webinars",
+    src: "Media/achivement.jpg",
+    alt: "Achivements",
+    to: "/Achivements",
+    linkText: "Alumni Achivements",
   },
-  {
-    src: "Media/pod.png",
-    alt: "Alumni Meet",
-    to: "/Alumni Meets",
-    linkText: "Alumni Meet",
-  },
+   
   
 ];
 
@@ -40,7 +36,7 @@ const Publication = () => (
   <div className="publication-two-column">
     {/* Left: Plain centered text */}
     <div className="publication-plain-text">
-      <h2>Welcome to Our Publications</h2>
+      <h2>Publications</h2>
       <p>
 Indian Institute Of Technology Indore      </p>
     </div>

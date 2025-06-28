@@ -8,7 +8,7 @@ const navLinks = [
   {
     name: "Alumni",
     dropdown: [
-      { name: "Alumni Directory", path: "/alumnidirectory" },
+      { name: "Alumni Directory", path: "/Alumnidirectory" },
       { name: "SAATHI", path: "/saathi" },
     ],
   },

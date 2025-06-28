@@ -1,0 +1,118 @@
+/* Container with two rows, each half viewport height */
+.newsletter-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Top row with background image and centered content */
+.newsletter-plain-text {
+  flex: 1; /* Half height */
+  background: url('/Media/podbuild.jpg') center center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: rgb(17, 117, 189);
+  text-align: center;
+}
+
+/* Optional overlay for better text contrast */
+.newsletter-plain-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.newsletter-plain-text-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  padding: 1rem 2rem;
+}
+
+.newsletter-plain-text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.newsletter-plain-text-content p {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #f5f6f7;
+}
+
+/* Bottom row with images grid */
+.newsletter-images-grid {
+  flex: 1; /* Half height */
+  background: #f5f6f7;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  overflow-y: auto; /* Scroll if content overflows */
+  align-items: center;
+}
+
+/* Individual image block */
+.newsletter-image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Image link styling */
+.newsletter-image-link {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(24, 130, 247, 0.08);
+  transition: transform 0.2s;
+}
+
+.newsletter-image-link:hover {
+  transform: scale(1.05);
+}
+
+/* Images */
+.newsletter-image {
+  width: 240px;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Link text below image */
+.newsletter-link-wrapper {
+  text-align: center;
+}
+
+.newsletter-under-link {
+  color: #1882f7;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.newsletter-under-link:hover {
+  color: #0a5bb5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .newsletter-plain-text-content h2 {
+    font-size: 1.8rem;
+  }
+  .newsletter-plain-text-content p {
+    font-size: 1rem;
+  }
+  .newsletter-image {
+    width: 180px;
+    height: 240px;
+  }
+}

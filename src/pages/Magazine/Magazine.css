@@ -1,0 +1,118 @@
+/* Container with two rows, each half viewport height */
+.magazine-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Top row with background image and centered content */
+.magazine-plain-text {
+  flex: 1; /* Half height */
+  background: url('/Media/magazine.jpg') center center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: rgb(19, 142, 230);
+  text-align: center;
+}
+
+/* Optional overlay for better text contrast */
+.magazine-plain-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.magazine-plain-text-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  padding: 1rem 2rem;
+}
+
+.magazine-plain-text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.magazine-plain-text-content p {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #f5f6f7;
+}
+
+/* Bottom row with images grid */
+.magazine-images-grid {
+  flex: 1; /* Half height */
+  background: #f5f6f7;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  overflow-y: auto; /* Scroll if content overflows */
+  align-items: center;
+}
+
+/* Individual image block */
+.magazine-image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Image link styling */
+.magazine-image-link {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(24, 130, 247, 0.08);
+  transition: transform 0.2s;
+}
+
+.magazine-image-link:hover {
+  transform: scale(1.05);
+}
+
+/* Images */
+.magazine-image {
+  width: 240px;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Link text below image */
+.magazine-link-wrapper {
+  text-align: center;
+}
+
+.magazine-under-link {
+  color: #1882f7;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.magazine-under-link:hover {
+  color: #0a5bb5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .magazine-plain-text-content h2 {
+    font-size: 1.8rem;
+  }
+  .magazine-plain-text-content p {
+    font-size: 1rem;
+  }
+  .magazine-image {
+    width: 180px;
+    height: 240px;
+  }
+}
