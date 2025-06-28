@@ -1,0 +1,29 @@
+.footer{
+      display: flex;
+      flex-direction: column;
+      
+      
+     }
+     .foot1{
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      background-color: #419db9;
+      text-decoration: none;
+      .quicklink{
+        display: flex;
+        flex-direction: column;
+       
+      }
+      .link_title{
+        font-weight:10px;
+        font-size: 1.4rem;
+         ;
+      }
+     }
+     
+     .rights{
+      background-color: #000000;
+      color: #f4f8fb;
+      text-align: center;
+     }

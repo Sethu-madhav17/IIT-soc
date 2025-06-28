@@ -1,0 +1,22 @@
+.typewriter {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0px ;
+  display: inline-block;
+  font-size: 6rem;
+  color:rgb(32, 93, 43);
+}
+@media (max-width: 1270px){
+
+.typewriter {
+    
+    font-size: 4rem;
+   
+    
+}
+}
+
+@media (max-width: 900px){
+ .typewriter { font-size: 3rem; }
+}
