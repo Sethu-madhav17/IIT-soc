@@ -242,3 +242,11 @@
     width: 100%;
   }
 }
+@media (max-width:400px) {
+  .navbar-title{
+    display: none;
+  }
+  .navbar-subtitle{
+     display: none;
+  }
+}

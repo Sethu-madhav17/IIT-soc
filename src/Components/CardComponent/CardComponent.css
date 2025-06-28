@@ -12,6 +12,8 @@ flex-direction: row-reverse;
   transition: transform 0.2s, background-image 0.2s;
   box-sizing: border-box;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-component:hover {
@@ -21,16 +23,17 @@ flex-direction: row-reverse;
 
 .card-component__icon {
     border-radius: 5px;
-  width: 100%;
+  width: 12rem;
   height: 12rem;
 }
 
 .card-component__title {
     color: aliceblue;
     text-align: center;
-  font-family: 'Mullish', Arial, sans-serif;
-  font-size: 0.7rem;
-  font-weight: bold;
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
   padding-top: 1rem;
   margin: 0;
 }
@@ -39,7 +42,8 @@ flex-direction: row-reverse;
     text-align: center;
   font-family: 'Mullish', Arial, sans-serif;
   padding: 0.75rem 0;
-  font-size: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   color: #0c0c0c;
   line-height: 1.6;
   margin: 0;
@@ -60,4 +64,12 @@ flex-direction: row-reverse;
 
 .card-component__socials a:hover .card-component__icon-social {
   transform: scale(1.18);
+}
+
+@media (max-width: 370px){
+  .card-component {
+    width: 250px;
+
+  }
+  
 }

@@ -98,8 +98,8 @@ const teamMembers = [
 ];
 
 const Team = () => (
-  <div style={{ padding: "40px" }}>
-    <h1 style={{ textAlign: "center", marginBottom: "32px" , fontWeight:"bold"}}>Our Team</h1>
+  <div className="cardbox">
+    <h1 style={{ textAlign: "center", marginBottom: "32px" , fontWeight:"bold" ,backgroundColor:"white" ,width:"fit-content",padding:"10px" }}>Our Team</h1>
      <div className="cards">
         <div className="card" >
     {teamMembers.map((member, idx) => (

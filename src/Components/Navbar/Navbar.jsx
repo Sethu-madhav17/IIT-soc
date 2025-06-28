@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { NavLink, useLocation } from "react-router-dom";
+import SignUpButton from "../SignupUpButton/SignupUpButton";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -128,6 +129,7 @@ export default function Navbar() {
             )
           )}
         </ul>
+        <SignUpButton/>
       </div>
     </nav>
   );

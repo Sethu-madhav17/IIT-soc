@@ -86,12 +86,12 @@ const Footer = () => (
         <img
           src={logoUrl}
           alt="IIT Indore Logo"
-          style={{ width: 200, height: "auto", marginRight: 16 }}
+          style={{ width: "200px",minWidth:"90px", height: "auto", marginRight: 16 }}
         />
-        <div style={{ fontSize: 15, lineHeight: 1.5 }}>
+        <div style={{ fontSize: "clamp(10px, 3vw, 18px)", lineHeight: 1.5 }}>
           <strong>ACR Office, 7th floor, Abhinandan Bhavan,<br />
           Indian Institute of Technology Indore,</strong><br />
-          Khandwa Road, Simrol, Indore – 453552<br />
+          Khandwa Road, Simrol, Indore - 453552<br />
           India.
         </div>
       </div>

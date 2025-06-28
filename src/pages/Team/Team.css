@@ -1,7 +1,15 @@
 .body{
     align-items: center;
 }
-.card{width: 70%;
+.cardbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    background: url(C:\Users\hi\OneDrive\Desktop\iiti-soc\alumni\public\Media\topo.jpg);
+
+}
+.card{width: 100%;
+ position: relative;
   display: flex;
   flex-direction: row;
     /* display: grid; */
@@ -9,13 +17,19 @@
   grid-template-columns: repeat(3, 1fr);
  align-items: center;
  justify-content: center;
-  gap: 1rem;
-  
+  gap: 3.5rem;
+  padding: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border: none;
+  background:none;
 }
 .cards{  
-    
+  /* background: url(C:\Users\hi\OneDrive\Desktop\iiti-soc\alumni\public\Media\topo.jpg); */
+    width: 100%;
     padding: 50px;
     display: flex;
     justify-content: space-around;
+    
 }
 /* style={{ display: "flex", gap: "42px", flexWrap: "wrap", justifyContent: "center", padding: "40px " }} */
