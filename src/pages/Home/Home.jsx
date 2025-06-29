@@ -4,6 +4,7 @@ import Typewriter from '../../Components/Typewriter/Typewriter'
 import Sphereglow from '../../Components/Sphereglow/Sphereglow'
 import Introtext from '../../Components/Introtext'
 import Footer from '../../Components/Footer/Footer'
+import SignupUpButton from '../../Components/SignupUpButton/SignupUpButton'
 
 function Home() {
   return (
@@ -22,7 +23,7 @@ function Home() {
     </div>
   </div>
   <div className="mvbanner">
-     <p id='mvtext'> mission vission</p>
+     <p id='mvtext'> Mission Vision</p>
   <div className="mvcontainer">
       <div class="vision">
       <span class="alpha" >Vision</span>
@@ -42,28 +43,32 @@ function Home() {
       <img src="/Media/adar pandita.jpg" alt="image4" className="login_image"/>
       <img src="/Media/vishal.jpg" alt="image5" className="login_image"/>
     </div>
-<button class="signup-btn">
-    <span class="label">Sign Up</span>
-    <span class="accent"></span>
-    <span class="arrow"></span>
-  </button>   </div>
+<SignupUpButton/>  </div>
   <div className="message_bar">
-     <div className="message dean">
-       <img alt="Dean ACR IIT indore" src="/Media/profsuman.jpg" id="img_message"/>
-        <div id="name">suman</div>
-        <div id="desg">dean ACR</div>
-        <p id="m_title">Dean ACR</p>
-         <p id="m_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus at odit voluptas deserunt sequi inventore omnis. Corrupti, accusamus! Libero quod magni ullam perspiciatis quae voluptate commodi animi aperiam fugiat eveniet assumenda sapiente accusamus numquam repudiandae, cumque itaque quas blanditiis a deserunt sequi sunt. Possimus sapiente doloremque modi ex earum.</p> 
+  <div className="message dean">
+    <div className="left">
+      <img alt="Dean ACR IIT indore" src="/Media/profsuman.jpg" id="img_message"/>
+      <div id="name">Prof. Suman Mukhopadhyay</div>
+      <div id="desg">Dean ACR</div>
     </div>
-      <div className="message director">
-        <img alt="Director IIT indore" src="/Media/suhas_s_joshi.png" id="img_message"/>
-        <div id="name">suhas</div>
-        <div id="desg">director</div>
-        <p id="m_title">Director</p>
-         <p id="m_content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, modi odit eveniet adipisci expedita veniam pariatur soluta voluptate. Voluptatum fugiat optio, voluptate amet cumque id incidunt perspiciatis dolore, iste nemo obcaecati omnis fugit velit dolor similique possimus sequi distinctio nostrum numquam mollitia vero, vitae porro! Nesciunt suscipit laborum exercitationem necessitatibus.</p>      
-     </div>
-   </div>
-   
+    <div className="right">
+      <p id="m_title">Dean ACR</p>
+      <p id="m_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eius similique inventore ducimus adipisci rem! Exercitationem architecto eligendi, labore porro adipisci ducimus veritatis in quod ex, dolorem sint suscipit laborum iure voluptate laudantium. Ipsam minus nam explicabo magni voluptates accusamus, eos tenetur commodi praesentium adipisci. Harum fugit incidunt odit praesentium?</p>
+    </div>
+  </div>
+  <div className="message director">
+    <div className="left">
+      <img alt="Director IIT indore" src="/Media/suhas_s_joshi.png" id="img_message"/>
+      <div id="name">Prof. Suhas S. Joshi</div>
+      <div id="desg">Director</div>
+    </div>
+    <div className="right">
+      <p id="m_title">Director</p>
+      <p id="m_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sequi vitae corporis temporibus! Magnam laboriosam sapiente voluptatum dolores, neque molestiae eligendi aliquid harum aspernatur maxime doloribus distinctio nulla ut unde voluptatibus vel qui adipisci optio facilis temporibus! Optio ipsum, quaerat aliquam ad saepe repudiandae, voluptatem assumenda non sit, deserunt laudantium.</p>
+    </div>
+  </div>
+</div>
+
     </>
   )
 }

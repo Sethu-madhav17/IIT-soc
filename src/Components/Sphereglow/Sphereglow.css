@@ -80,6 +80,9 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #ffffff;
 }
+.banner{
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 85% 90%, 0% 75%);
+}
 
 }
 @media (max-width: 900px){
@@ -98,5 +101,9 @@
 @media (max-width: 600px){
 .iitabhi{
   display: none;
-}}
+}
+.banner{
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 85% 85%, 0% 75%);
+}
+}
 
