@@ -11,7 +11,7 @@ const imageLinks = [
     linkText: "Newsletter",
   },
   {
-    src: "/Media/iitiabhi1.jpg",
+    src: "/Media/pub.jpg",
     alt: "Yearbook",
     to: "/Yearbook",
     linkText: "Yearbook",

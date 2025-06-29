@@ -19,5 +19,21 @@
    border: 1px solid rgba(255, 255, 255, 0.3);
    color: white;
    border-radius: 20px ;
+   align-items: center;
 
+}
+.form-floating{
+    display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 90%;
+}
+.gradient-text {
+  background: radial-gradient(circle at 50% 50%, #ff6a00, #ee0979, #bd6e8c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+ font-weight:bolder;
+ font-size: 3rem;
 }

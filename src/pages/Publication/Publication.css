@@ -3,20 +3,23 @@
   gap: 3rem;
   align-items: flex-start;
   justify-content: center;
-  max-width: 1300px;
+  max-width: 100%;
   margin: 0 auto;
   /* padding: 40px 20px; */
   flex-wrap: wrap;
 }
 
 .publication-plain-text {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(/Media/iitiabhi1.jpg) no-repeat center center;
+background-size: cover;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
   flex: 1 1 260px;
-  max-width: 340px;
-  background: #ffffff;
-  border-radius: 12px;
+  max-width: 60%;
+  /* background: #ffffff; */
+  /* border-radius: 12px; */
   padding: 2rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   min-width: 220px;
@@ -26,14 +29,18 @@
 
 .publication-plain-text h2 {
   margin-top: 0;
-  font-size: 2rem;
-  color: #1976ed;
-  font-weight: 700;
+ font-size: clamp(2rem, 3vw, 5rem);
+  background: radial-gradient(circle at 50% 50%, #fceb02, #abac69, #f3e302);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
 }
 
 .publication-plain-text p {
   font-size: 1.1rem;
-  color: #333;
+  color: #fefefe;
   margin-top: 1rem;
 }
 

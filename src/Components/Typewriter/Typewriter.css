@@ -5,7 +5,12 @@
   border-right: 0px ;
   display: inline-block;
   font-size: 6rem;
-  color:rgb(32, 93, 43);
+ background: radial-gradient(circle at 50% 50%, #ff6a00, #ee0979, #bd6e8c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight:bolder;
 }
 @media (max-width: 1270px){
 
