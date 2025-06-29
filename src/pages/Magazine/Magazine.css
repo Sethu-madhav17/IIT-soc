@@ -2,6 +2,7 @@
 .magazine-container {
   display: flex;
   flex-direction: row;
+  
   height: 100vh; /* Full viewport height */
 }
 
@@ -115,4 +116,13 @@
     width: 180px;
     height: 240px;
   }
+  .magazine-container {
+  display: flex;
+  flex-direction: column;
+  
+  height: 100vh; /* Full viewport height */
+}
+.magazine-images-grid {
+  height: fit-content;
+}
 }
