@@ -57,7 +57,7 @@ background-size: cover;
   border-radius: 12px;
   padding: 2vh;
   min-width: fit-content;
-  height: 100vh;
+  height: fit-content;
 }
 
 .publication-image-block {
