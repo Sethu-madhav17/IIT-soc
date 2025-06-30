@@ -6,9 +6,12 @@
   flex-direction: column;
   align-items: center;
     background: url(C:\Users\hi\OneDrive\Desktop\iiti-soc\alumni\public\Media\topo.jpg);
-
+ height: 100vh;
+ justify-content: center;
 }
-.card{width: 100%;
+.card{width: fit-content;
+  max-width: 1500px;
+  align-content: center;
  position: relative;
   display: flex;
   flex-direction: row;
@@ -25,11 +28,9 @@
   background:none;
 }
 .cards{  
-  /* background: url(C:\Users\hi\OneDrive\Desktop\iiti-soc\alumni\public\Media\topo.jpg); */
     width: 100%;
     padding: 50px;
     display: flex;
     justify-content: space-around;
     
 }
-/* style={{ display: "flex", gap: "42px", flexWrap: "wrap", justifyContent: "center", padding: "40px " }} */

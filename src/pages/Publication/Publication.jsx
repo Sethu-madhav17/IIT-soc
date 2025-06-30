@@ -34,14 +34,12 @@ const imageLinks = [
 
 const Publication = () => (
   <div className="publication-two-column">
-    {/* Left: Plain centered text */}
     <div className="publication-plain-text">
       <h2>Publications</h2>
       <p>
 Indian Institute Of Technology Indore      </p>
     </div>
 
-    {/* Right: Images grid with text field and link */}
     <div className="publication-images-grid">
       {imageLinks.map((img, idx) => (
         <div className="publication-image-block" key={idx}>

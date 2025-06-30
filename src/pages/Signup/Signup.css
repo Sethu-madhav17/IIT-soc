@@ -8,10 +8,10 @@
 
 .signup-form {
   background: #fff;
-  background: rgba(255, 255, 255, 0.1); /* Translucent white */
+  background: rgba(255, 255, 255, 0.1); 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px); /* Main blur effect */
-   -webkit-backdrop-filter: blur(10px); /* Safari support */
+    backdrop-filter: blur(10px); 
+   -webkit-backdrop-filter: blur(10px); 
    border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 2.5rem 2rem;
   border-radius: 16px;
@@ -81,7 +81,6 @@
   background: #176fd1;
 }
 
-/* Responsive styles */
 @media (max-width: 500px) {
   .signup-form {
     padding: 1.2rem 0.5rem;

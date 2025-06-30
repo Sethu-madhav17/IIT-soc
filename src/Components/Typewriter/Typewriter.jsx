@@ -11,7 +11,7 @@ const Typewriter = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [sentenceIndex, setSentenceIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
-  const constant = ' .'; // the constant ending
+  const constant = ' .'; 
 
   useEffect(() => {
     const currentSentence = sentences[sentenceIndex];
@@ -24,7 +24,7 @@ const Typewriter = () => {
           setText(currentSentence.substring(0, charIndex + 1) + constant);
           setCharIndex(charIndex + 1);
         } else {
-          setTimeout(() => setIsDeleting(true), 1000); // Pause before delete
+          setTimeout(() => setIsDeleting(true), 1000); 
         }
       } else {
         if (charIndex > 0) {

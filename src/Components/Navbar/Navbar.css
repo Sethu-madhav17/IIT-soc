@@ -41,7 +41,6 @@
   color: #c5c8d7;
 }
 
-/* Hamburger styles */
 .navbar-hamburger {
   display: none;
   background: none;
@@ -76,7 +75,6 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Main nav links */
 .navbar-links {
   display: flex;
   align-items: center;
@@ -92,14 +90,12 @@
   font-size: 1rem;
 }
 
-/* Remove bullets from dropdown */
 .navbar-dropdown {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Link text styles */
 .navbar-link-text,
 .navbar-dropdown-link {
   color: #fff;
@@ -113,18 +109,15 @@
   transition: color 0.18s;
 }
 
-/* Dropdown arrow */
 .navbar-dropdown-arrow {
   font-size: 0.7em;
   margin-left: 6px;
 }
 
-/* Dropdown parent for positioning */
 .dropdown-parent, .dropdown-hover-wrapper {
   position: relative;
 }
 
-/* Dropdown menu styles */
 .navbar-dropdown {
   display: none;
   position: absolute;
@@ -168,12 +161,10 @@
   text-decoration: none;
 }
 
-/* Hide underline for all links */
 .navbar-underline {
   display: none !important;
 }
 
-/* Responsive styles */
 @media (max-width: 900px) {
   .navbar-container {
     flex-direction: row;

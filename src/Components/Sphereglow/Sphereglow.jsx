@@ -20,7 +20,6 @@ const spheres = [
 const SphereGlow = () => {
   return (
     <div className="banner">
-      {/* Glowing Spheres */}
       {spheres.map(({ top, left, right ,size }, i) => (
         <div
           key={i}
@@ -35,7 +34,6 @@ const SphereGlow = () => {
         />
       ))}
 
-      {/* Overlay Boxes */}
       <div className="content-wrapper">
         
           <div className="textbox">

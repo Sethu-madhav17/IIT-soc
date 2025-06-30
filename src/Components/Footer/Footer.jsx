@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const logoUrl = "/Media/logo.png"; //  IIT Indore logo /logo.png
+const logoUrl = "/Media/logo.png"; 
 
 const socialIcons = [
   {
@@ -81,7 +81,6 @@ const Footer = () => (
       gap: 32,
       padding: "0 32px"
     }}>
-      {/* Left: Logo and Address */}
       <div style={{ flex: "1 1 320px", display: "flex", alignItems: "flex-start", gap: 20 }}>
         <img
           src={logoUrl}
@@ -95,7 +94,6 @@ const Footer = () => (
           India.
         </div>
       </div>
-      {/* Center: Quick Links */}
       <div style={{ flex: "1 1 220px", minWidth: 180 }}>
         <div style={{ fontWeight: 600, fontSize: 24, marginBottom: 12 }}>Quick Links</div>
         <div style={{ fontSize: 18, lineHeight: 1.7 }}>
@@ -105,7 +103,6 @@ const Footer = () => (
           <div>Office</div>
         </div>
       </div>
-      {/* Right: Social Media */}
       <div style={{ flex: "1 1 200px", minWidth: 160 }}>
         <div style={{ fontWeight: 600, fontSize: 24, marginBottom: 12 }}>Social media</div>
         <div style={{ display: "flex", gap: 16, alignItems: "center" }}>

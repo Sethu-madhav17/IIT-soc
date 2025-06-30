@@ -31,15 +31,12 @@ const imageLinks = [
 
 const Magazine = () => (
   <div className="magazine-container">
-    {/* Top row: Plain centered text with background */}
     <div className="magazine-plain-text">
       <div className="magazine-plain-text-content">
         <h2>Alumni Magazine</h2>
         <p>Indian Institute Of Technology Indore</p>
       </div>
     </div>
-
-    {/* Bottom row: Images grid */}
     <div className="magazine-images-grid">
       {imageLinks.map((img, idx) => (
         <div className="magazine-image-block" key={idx}>

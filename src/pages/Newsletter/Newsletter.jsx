@@ -20,7 +20,7 @@ const imageLinks = [
 
 const Newsletter = () => (
   <div className="newsletter-container">
-    {/* Top row: Plain centered text with background */}
+    
     <div className="newsletter-plain-text">
       <div className="newsletter-plain-text-content">
         <h2>Newsletter</h2>
@@ -28,7 +28,7 @@ const Newsletter = () => (
       </div>
     </div>
 
-    {/* Bottom row: Images grid */}
+    
     <div className="newsletter-images-grid">
       {imageLinks.map((img, idx) => (
         <div className="newsletter-image-block" key={idx}>

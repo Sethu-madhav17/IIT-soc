@@ -1,14 +1,14 @@
-/* Container with two rows, each half viewport height */
+
 .magazine-container {
   display: flex;
   flex-direction: row;
   
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
 }
 
-/* Top row with background image and centered content */
+
 .magazine-plain-text {
-  flex: 1; /* Half height */
+  flex: 1; 
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('/Media/magazine.jpg') center center / cover no-repeat;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@
   text-align: center;
 }
 
-/* Optional overlay for better text contrast */
+/*  overlay on plane text */
 .magazine-plain-text::before {
   content: "";
   position: absolute;
@@ -46,19 +46,19 @@
   color: #f5f6f7;
 }
 
-/* Bottom row with images grid */
+
 .magazine-images-grid {
-  flex: 1; /* Half height */
+  flex: 1; 
   background: #f5f6f7;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
   padding: 1.5rem 2rem;
-  overflow-y: auto; /* Scroll if content overflows */
+  overflow-y: auto; 
   align-items: center;
 }
 
-/* Individual image block */
+
 .magazine-image-block {
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@
   gap: 0.5rem;
 }
 
-/* Image link styling */
+
 .magazine-image-link {
   display: block;
   border-radius: 12px;
@@ -79,7 +79,6 @@
   transform: scale(1.05);
 }
 
-/* Images */
 .magazine-image {
   width: 240px;
   height: 340px;
@@ -87,7 +86,7 @@
   display: block;
 }
 
-/* Link text below image */
+
 .magazine-link-wrapper {
   text-align: center;
 }
@@ -104,7 +103,7 @@
   color: #0a5bb5;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 600px) {
   .magazine-plain-text-content h2 {
     font-size: 1.8rem;
@@ -120,7 +119,7 @@
   display: flex;
   flex-direction: column;
   
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
 }
 .magazine-images-grid {
   height: fit-content;

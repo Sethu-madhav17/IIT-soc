@@ -1,6 +1,6 @@
 import React from 'react';
 
-const quoteText = `Inverted commas are a kind of punctuation used to put the marks around certain phrases, or words that have specific importance in a sentence. To be precise, if certain phrases are taken from a poem and form a sentence then these punctuations are used.`;
+const quoteText = `The alumni website is a hub for connecting with alumni and fostering community. It features magazines, yearbooks, newsletters, and hosts events, reunions, and alumni talks to keep everyone engaged and informed.`;
 
 const Introtext = () => (
   <div style={{
@@ -17,13 +17,12 @@ const Introtext = () => (
     boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
     borderRadius: '8px',
     textAlign:'center',
-    padding:'40px',
+    padding:'60px',
   }}>
-    {/* Opening quote */}
     <span style={{
-      position: 'absolute',
-      top: '-50px',
-      left: '-3px',
+      position: 'relative',
+      // top: '-50px',
+      // left: '-3px',
       fontSize: '150px',
       color: '#e0e0e0',
       fontFamily: 'serif',
@@ -36,7 +35,6 @@ const Introtext = () => (
     <span>
       {quoteText}
     </span>
-    {/* Closing quote */}
     <span style={{
       position: 'absolute',
       bottom: '-50px',

@@ -62,7 +62,6 @@
   display: inline-block;
 }
 
-/* Responsive scaling */
 @media (max-width: 346px) {
   .signupup-btn {
     font-size: 1rem;

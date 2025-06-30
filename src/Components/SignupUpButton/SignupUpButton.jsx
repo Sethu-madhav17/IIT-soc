@@ -6,7 +6,7 @@ const SignupUpButton = ({ children }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/Signup"); // Redirects to /signup page
+    navigate("/Signup"); 
   };
 
   return (

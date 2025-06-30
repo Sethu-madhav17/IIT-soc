@@ -1,14 +1,12 @@
-/* Container with two rows, each half viewport height */
 .newsletter-container {
   display: flex;
   flex-direction: row;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   flex-wrap: wrap;
 }
 
-/* Top row with background image and centered content */
 .newsletter-plain-text {
-  flex: 1; /* Half height */
+  flex: 1; 
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('/Media/podbuild.jpg') center center / cover no-repeat;
   display: flex;
   justify-content: center;
@@ -18,7 +16,6 @@
   text-align: center;
 }
 
-/* Optional overlay for better text contrast */
 .newsletter-plain-text::before {
   content: "";
   position: absolute;
@@ -46,26 +43,26 @@
   color: #f5f6f7;
 }
 
-/* Bottom row with images grid */
 .newsletter-images-grid {
-  flex: 1; /* Half height */
+  flex: 1;
   background: #ffffff;
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
   padding: 1.5rem 2rem;
-  overflow-y: auto; /* Scroll if content overflows */
+  overflow-y: auto; 
   align-items: center;
+  
   width: 100%;
-  height: fit-content;
+  height: 100vh;
   justify-content: center;
 }
 
-/* Individual image block */
+
 .newsletter-image-block {
   display: flex;
-  min-width: 110px;
+  max-width: 700px;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
@@ -73,7 +70,7 @@
   border-radius: 10px;
 }
 
-/* Image link styling */
+
 .newsletter-image-link {
   display: block;
   border-radius: 12px;
@@ -86,7 +83,6 @@
   transform: scale(1.05);
 }
 
-/* Images */
 .newsletter-image {
   width: 240px;
   height: 340px;
@@ -94,7 +90,6 @@
   display: block;
 }
 
-/* Link text below image */
 .newsletter-link-wrapper {
   text-align: center;
 }
@@ -111,7 +106,6 @@
   color: #0a5bb5;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .newsletter-container {
   

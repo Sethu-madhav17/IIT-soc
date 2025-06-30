@@ -1,9 +1,7 @@
-// src/pages/Team.jsx
 import React from "react";
 import CardComponent from "../../Components/CardComponent/CardComponent";
 import "./Team.css"
-// You can use local images (import them) or public URLs
-import member1 from "/Media/ansh.png"; // if in src/images
+import member1 from "/Media/ansh.png"; 
 import member2 from "/Media/dadhich.jpg";
 import member3 from "/Media/vedansh.jpg";
 import member4 from "/Media/anima.jpg";
@@ -15,7 +13,7 @@ import member9 from "/Media/ak.jpg";
 
 const teamMembers = [
   {
-    imageSrc: member1, // or "/images/member1.jpg" if in public
+    imageSrc: member1, 
     imageAlt: "Ansh Kyal",
     title: "Ansh Kyal",
     description: "Head Alumni Cell",
@@ -94,7 +92,6 @@ const teamMembers = [
     linkedinUrl: "#",
     twitterUrl: "#",
   },
-  // Add more team members as needed
 ];
 
 const Team = () => (

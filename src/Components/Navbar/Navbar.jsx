@@ -29,10 +29,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Close menu on nav click (for mobile UX)
   const handleNavClick = () => setMenuOpen(false);
 
-  // Helper to detect mobile mode (for dropdown click)
   const isMobile = window.innerWidth <= 900;
 
   return (
@@ -51,7 +49,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        {/* Hamburger icon */}
+        
         <button
           className={`navbar-hamburger${menuOpen ? " open" : ""}`}
           onClick={() => setMenuOpen((open) => !open)}
