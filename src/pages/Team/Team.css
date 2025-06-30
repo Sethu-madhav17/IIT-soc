@@ -6,11 +6,13 @@
   flex-direction: column;
   align-items: center;
     background: url(C:\Users\hi\OneDrive\Desktop\iiti-soc\alumni\public\Media\topo.jpg);
- height: 100vh;
- justify-content: center;
+ /* height: 100vh; */
+ /* justify-content: center; */
 }
-.card{width: fit-content;
+.card{
+  width: fit-content;
   max-width: 1500px;
+
   align-content: center;
  position: relative;
   display: flex;
@@ -32,5 +34,6 @@
     padding: 50px;
     display: flex;
     justify-content: space-around;
-    
+    height: fit-content;
+    overflow-y: auto;
 }
