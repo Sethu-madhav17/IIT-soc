@@ -9,6 +9,22 @@
  /* height: 100vh; */
  /* justify-content: center; */
 }
+.bubble2{
+  display: flex;
+  position: absolute;
+  right: 0;
+  justify-items: left;
+  bottom: 0;
+  width:20vw
+}
+.bubble3{
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-items: right;
+  bottom: 0;
+  width:20vw
+}
 .card{
   width: fit-content;
   max-width: 1500px;

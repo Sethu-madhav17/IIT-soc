@@ -2,7 +2,7 @@ import React from 'react'
 import './Home.css'
 import Typewriter from '../../Components/Typewriter/Typewriter'
 import Sphereglow from '../../Components/Sphereglow/Sphereglow'
-import Introtext from '../../Components/Introtext'
+import Introtext from '../../Components/Introtext/Introtext'
 import Footer from '../../Components/Footer/Footer'
 import SignupUpButton from '../../Components/SignupUpButton/SignupUpButton'
 
@@ -23,6 +23,8 @@ function Home() {
     </div>
   </div>
   <div className="mvbanner">
+    <img className='bubble' src='/Media/bubble.png'></img>
+    <img className='bubble1' src='/Media/bubble.png'></img>
      <p id='mvtext'> Mission Vision</p>
   <div className="mvcontainer">
       <div class="vision">
@@ -37,6 +39,8 @@ function Home() {
     </div>
  
        <div className="login">
+        <img className='bubble' src='/Media/bubble.png'></img>
+    <img className='bubble1' src='/Media/bubble.png'></img>
     <div className="login_images">
       <img src="/Media/aahan.jpg" alt="image1" className="login_image"/>
       <img src="/Media/aadish.jpg" alt="image2" className="login_image"/>
@@ -45,6 +49,7 @@ function Home() {
     </div>
 <SignupUpButton/>  </div>
   <div className="message_bar">
+    
   <div className="message dean">
     <div className="left">
       <img alt="Dean ACR IIT indore" src="/Media/profsuman.jpg" id="img_message"/>

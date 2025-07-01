@@ -11,7 +11,7 @@ import Signup from './pages/Signup/Signup';
 import Magazine from './pages/Magazine/Magazine';
 import Newsletter from './pages/Newsletter/Newsletter';
 import Achivements from './pages/Achivements/Achivements';
-
+import Events from './pages/Events/Events'
 
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
         <Route path="/Magazine" element={<Magazine />} />
         <Route path="/Newsletter" element={<Newsletter />} />
         <Route path="/Achivements" element={<Achivements />} />
-        <Route path="/events/workshops" element={<div>Workshops Page</div>} />
+        <Route path="/Events" element={<Events/>} />
         <Route path="/events/webinars" element={<div>Webinars Page</div>} />
         <Route path="/Login" element={<Login />} />
       </Routes>

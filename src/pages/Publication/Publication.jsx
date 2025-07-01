@@ -34,6 +34,7 @@ const imageLinks = [
 
 const Publication = () => (
   <div className="publication-two-column">
+    <img className='bubble2' src='/Media/bubble.png'></img>
     <div className="publication-plain-text">
       <h2>Publications</h2>
       <p>
@@ -41,6 +42,7 @@ Indian Institute Of Technology Indore      </p>
     </div>
 
     <div className="publication-images-grid">
+       
       {imageLinks.map((img, idx) => (
         <div className="publication-image-block" key={idx}>
           <Link to={img.to} className="publication-image-link">

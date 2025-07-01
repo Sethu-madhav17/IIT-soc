@@ -11,6 +11,20 @@
     
     
 }
+.bubble{
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-items: left;
+  width:20vw
+}
+.bubble1{
+  display: flex;
+  position: absolute;
+  right: 0;
+  justify-items: left;
+  width:20vw
+}
 .polygon-wrapper {
       position: relative;
       width: 100vw;
@@ -105,6 +119,7 @@
    flex-direction: row;
    flex-wrap: wrap;
     height: fit-content;
+   
 }
 #mvtext{
  margin-top: 50px;
@@ -176,7 +191,7 @@
   justify-content: center;
   align-items: flex-start;
   padding: 2rem 1rem;
-  background: #f8f9fa;
+  
 }
 
 .message {

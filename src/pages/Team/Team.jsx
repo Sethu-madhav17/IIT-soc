@@ -96,6 +96,9 @@ const teamMembers = [
 
 const Team = () => (
   <div className="cardbox">
+    <img className='bubble' src='/Media/bubble.png'></img>
+        
+    <img className='bubble2' src='/Media/bubble.png'></img>
     <h1 style={{ textAlign: "center", marginBottom: "32px" , fontWeight:"bold" ,backgroundColor:"white" ,width:"fit-content",padding:"10px" }}>Team Alumni Cell</h1>
      <div className="cards">
         <div className="card" >
@@ -103,7 +106,9 @@ const Team = () => (
       <CardComponent key={idx} {...member} />
     ))}
   </div>
+  
   </div>
+  
   </div>
 );
 

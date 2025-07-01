@@ -15,11 +15,8 @@ const navLinks = [
   { name: "Team", path: "/team" },
   { name: "Publications", path: "/publications" },
   {
-    name: "Events",
-    dropdown: [
-      { name: "Workshops", path: "/events/workshops" },
-      { name: "Webinars", path: "/events/webinars" },
-    ],
+    name: "Events",path: "/events"
+   
   },
   { name: "Login", path: "/login" },
 ];
