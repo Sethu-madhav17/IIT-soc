@@ -152,7 +152,7 @@
 .navbar-dropdown-link:hover,
 .navbar-link-text:hover {
   color: #1976ed;
-  background: #2e3448;
+  /* background: #2e3448; */
 }
 
 .navbar-link-text.active,
