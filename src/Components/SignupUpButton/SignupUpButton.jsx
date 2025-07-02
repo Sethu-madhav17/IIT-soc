@@ -14,7 +14,7 @@ const SignupUpButton = ({ children }) => {
       <span className="label">SignUp</span>
       {children}
       <span className="accent"></span>
-      <span className="arrow"></span>
+      <span className="arrow1"></span>
     </button>
   );
 };

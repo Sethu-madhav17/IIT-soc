@@ -47,7 +47,7 @@
   border-radius: 2px;
 }
 
-.signupup-btn .arrow {
+.signupup-btn .arrow1 {
   position: absolute;
   top: 50%;
   right: 23px;
@@ -75,7 +75,7 @@
     height: 2.5em;
     right: 15px;
   }
-  .signupup-btn .arrow {
+  .signupup-btn .arrow1 {
     right: 22px;
     width: 6px;
   height: 6px;
