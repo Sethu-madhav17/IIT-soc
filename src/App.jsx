@@ -12,6 +12,7 @@ import Magazine from './pages/Magazine/Magazine';
 import Newsletter from './pages/Newsletter/Newsletter';
 import Achivements from './pages/Achivements/Achivements';
 import Events from './pages/Events/Events'
+import Magnumopus from './pages/Magnumopus/Magnumopus'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/Newsletter" element={<Newsletter />} />
         <Route path="/Achivements" element={<Achivements />} />
         <Route path="/Events" element={<Events/>} />
+        <Route path="/Magnumopus" element={<Magnumopus/>} />
         <Route path="/events/webinars" element={<div>Webinars Page</div>} />
         <Route path="/Login" element={<Login />} />
       </Routes>

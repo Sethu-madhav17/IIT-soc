@@ -1,0 +1,11 @@
+/* /* Optional: Fancy dots and arrow styles */
+.slick-dots li button:before {
+  color: #20639b; /* Blue dot */
+  font-size: 19px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+  font-size: 25px;
+}

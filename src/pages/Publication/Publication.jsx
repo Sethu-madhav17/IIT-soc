@@ -19,7 +19,7 @@ const imageLinks = [
   {
     src: "Media/magazine.jpg",
     alt: "Magazine",
-    to: "../Magazine",
+    to: "/Magazine",
     linkText: "Alumni Magazine",
   },
    {
