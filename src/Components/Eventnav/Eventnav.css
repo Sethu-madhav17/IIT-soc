@@ -30,6 +30,7 @@
   justify-content: center;
   cursor: pointer;
   user-select: none;
+  margin-bottom: 40px;
 }
 
 .item {
@@ -61,12 +62,12 @@
   user-select: none;
   border-radius: 12px;
   z-index: 5;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.arrow:hover {
+/* .arrow:hover {
   background-color: rgba(255, 255, 255, 0.7);
-}
+} */
 
 .arrow.left {
   left: 35%;
