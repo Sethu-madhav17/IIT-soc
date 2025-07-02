@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Eventnav.css";
+import Magnumopus from "../../pages/Magnumopus/Magnumopus";
 
 const data = [
   {
