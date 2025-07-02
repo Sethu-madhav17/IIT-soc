@@ -72,7 +72,7 @@ const EventCard = ({ event }) => {
   );
 };
 
-function App() {
+function Magnumopus() {
   return (
     <div className="magnumopus-container">
       <div className="bannermo">
@@ -91,4 +91,4 @@ function App() {
   );
 }
 
-export default App;
+export default Magnumopus;

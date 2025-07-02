@@ -12,7 +12,8 @@ import Magazine from './pages/Magazine/Magazine';
 import Newsletter from './pages/Newsletter/Newsletter';
 import Achivements from './pages/Achivements/Achivements';
 import Events from './pages/Events/Events'
-import Magnumopus from './pages/Magnumopus/Magnumopus'
+import Magnumopus from './pages/Magnumopus/Magnumopus';
+
 
 function App() {
 
