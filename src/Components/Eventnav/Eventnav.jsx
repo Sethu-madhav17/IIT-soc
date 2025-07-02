@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Eventnav.css";
 import Magnumopus from "../../pages/Magnumopus/Magnumopus";
 
@@ -89,9 +90,10 @@ const Eventnav = () => {
 
         {data.map((item, index) => (
           <div className="item" key={index} onClick={() => setActive(index)}>
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
-              <img src={item.image} alt={`Image ${index + 1}`} />
-            </a>
+           <Link to={item.link}>
+  <img src={item.image} alt={`Image ${index + 1}`} />
+</Link>
+
           </div>
         ))}
 
