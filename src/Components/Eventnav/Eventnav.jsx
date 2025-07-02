@@ -1,34 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Eventnav.css";
-import Magnumopus from "../../pages/Magnumopus/Magnumopus";
 
 const data = [
-  {
-    image: "/Media/mopus.png",
-    link: "/Magnumopus",
-    label: "MagnumOpus",
-  },
-  {
-    image: "/Media/are.png",
-    link: "/Reunion",
-    label: "Reunion",
-  },
-  {
-    image: "/Media/convo.jpg",
-    link: "/Convocation",
-    label: "Convocation",
-  },
-  {
-    image: "/Media/cmeet.jpg",
-    link: "/Meets",
-    label: "Chapter/Alumni Meet",
-  },
-  {
-    image: "/Media/gallery.jpg",
-    link: "/Gallery",
-    label: "Gallery",
-  },
+  { image: "/Media/mopus.png", link: "/Magnumopus", label: "MagnumOpus" },
+  { image: "/Media/are.png", link: "/Reunion", label: "Reunion" },
+  { image: "/Media/convo.jpg", link: "/Convocation", label: "Convocation" },
+  { image: "/Media/cmeet.jpg", link: "/Meets", label: "Chapter/Alumni Meet" },
+  { image: "/Media/gallery.jpg", link: "/Gallery", label: "Gallery" },
 ];
 
 const Eventnav = () => {
@@ -37,6 +16,9 @@ const Eventnav = () => {
 
   const loadShow = () => {
     const items = containerRef.current.querySelectorAll(".slider .item");
+
+    const translateDistance = 180;
+    const scaleFactor = 0.15;
 
     items.forEach((item, index) => {
       item.style.transition = "transform 0.5s, filter 0.5s, opacity 0.5s";
@@ -55,15 +37,15 @@ const Eventnav = () => {
         item.style.opacity = 1;
       } else if (relativePos > 0) {
         const stt = relativePos;
-        item.style.transform = `translateX(${120 * stt}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(-1deg)`;
+        item.style.transform = `translateX(${translateDistance * stt}px) scale(${1 - scaleFactor * stt}) perspective(100px) rotateY(0deg)`;
         item.style.zIndex = -stt;
-        item.style.filter = "blur(5px)";
+        item.style.filter = "blur(10px)";
         item.style.opacity = stt > 2 ? 0 : 0.6;
       } else {
         const stt = -relativePos;
-        item.style.transform = `translateX(${-120 * stt}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(1deg)`;
+        item.style.transform = `translateX(${-translateDistance * stt}px) scale(${1 - scaleFactor * stt}) perspective(100px) rotateY(0deg)`;
         item.style.zIndex = -stt;
-        item.style.filter = "blur(5px)";
+        item.style.filter = "blur(10px)";
         item.style.opacity = stt > 2 ? 0 : 0.6;
       }
     });
@@ -75,7 +57,6 @@ const Eventnav = () => {
 
   const goPrev = () =>
     setActive((prev) => (prev === 0 ? data.length - 1 : prev - 1));
-
   const goNext = () =>
     setActive((prev) => (prev === data.length - 1 ? 0 : prev + 1));
 
@@ -90,10 +71,9 @@ const Eventnav = () => {
 
         {data.map((item, index) => (
           <div className="item" key={index} onClick={() => setActive(index)}>
-           <Link to={item.link}>
-  <img src={item.image} alt={`Image ${index + 1}`} />
-</Link>
-
+            <Link to={item.link}>
+              <img src={item.image} alt={`Image ${index + 1}`} />
+            </Link>
           </div>
         ))}
 
@@ -106,4 +86,5 @@ const Eventnav = () => {
 };
 
 export default Eventnav;
+
 

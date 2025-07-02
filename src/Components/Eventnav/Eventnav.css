@@ -1,6 +1,6 @@
 .eventnav-wrapper {
   width: 100%;
-  min-height: 50vh;
+  min-height: 60vh; /* slightly taller */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,37 +10,36 @@
 }
 
 .label {
-  font-size: 2rem;
+  font-size: 2.2rem; /* slightly bigger */
   color: rgb(0, 0, 0);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-align: center;
   font-weight: 600;
   font-family: 'Segoe UI', sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 
 .slider {
   position: relative;
   width: 100%;
-  max-width: 1000px;
-  height: auto;
-  min-height: 220px;
+  max-width: 1600px; /* bigger container */
+  height: 75vw;
+  min-height: 360px; /* taller slider */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   user-select: none;
-  
 }
 
 .item {
   position: absolute;
-  width: 300px;
-  height: 200px;
+  width: 70vw;  /* bigger cards */
+  height: 40vw; /* keeping ~3:2 aspect ratio */
   transition: all 0.5s ease;
-  border-radius: 15px;
+  border-radius: 20px; /* rectangular shape */
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
   cursor: pointer;
 }
 
@@ -48,25 +47,25 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* Arrows */
 .arrow {
   position: absolute;
-  bottom: -70px;
-  font-size: 2.2rem;
+  bottom: 110px; /* move arrows further down */
+  font-size: 3.5rem; /* bigger arrows */
   color: rgb(0, 0, 0);
-  padding: 10px 16px;
+  padding: 18px 24px;
   cursor: pointer;
   user-select: none;
   border-radius: 12px;
   z-index: 5;
-  /* background: rgba(255, 255, 255, 0.4); */
   transition: background-color 0.3s ease;
 }
 
 .arrow:hover {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .arrow.left {
@@ -80,17 +79,18 @@
 /* Responsive for tablets */
 @media (max-width: 768px) {
   .item {
-    width: 240px;
-    height: 160px;
+    width: 420px;
+    height: 280px;
   }
 
   .label {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .arrow {
-    font-size: 1.8rem;
-    bottom: -50px;
+    font-size: 2.5rem;
+    bottom: -75px;
+    padding: 12px 18px;
   }
 
   .arrow.left {
@@ -105,18 +105,18 @@
 /* Responsive for phones */
 @media (max-width: 480px) {
   .item {
-    width: 200px;
-    height: 140px;
+    width: 320px;
+    height: 213px;
   }
 
   .label {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .arrow {
-    font-size: 1.6rem;
-    padding: 8px 14px;
-    bottom: -40px;
+    font-size: 1.8rem;
+    padding: 10px 16px;
+    bottom: -55px;
   }
 
   .arrow.left {
@@ -127,3 +127,4 @@
     right: 20%;
   }
 }
+
