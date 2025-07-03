@@ -21,8 +21,8 @@
 
 .slider {
   position: relative;
-  width: 100%;
-  max-width: 1600px; /* bigger container */
+  width: 100%; 
+  /* max-width: 1600px; */
   height: 75vw;
   min-height: 360px; /* taller slider */
   display: flex;
@@ -76,7 +76,13 @@
 .arrow.right {
   right: 35%;
 }
-
+@media (max-width: 1300px) {
+.arrow {
+    font-size: 2.5rem;
+    bottom: 0px;
+    padding: 12px 18px;
+  }
+}
 /* Responsive for tablets */
 @media (max-width: 768px) {
   .item {
@@ -90,7 +96,7 @@
 
   .arrow {
     font-size: 2.5rem;
-    bottom: -75px;
+    bottom: -5px;
     padding: 12px 18px;
   }
 
@@ -104,7 +110,7 @@
 }
 
 /* Responsive for phones */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .item {
     width: 320px;
     height: 213px;

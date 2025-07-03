@@ -69,6 +69,7 @@ const Achivements = () => {
       <div className="achievements-header">
         <h1>Alumni Achievements</h1>
         <p>Indian Institute Of Technology Indore</p>
+        <h3>click on card</h3>
       </div>
       <div className="achievements-grid">
         {achievements.map((item, idx) => (

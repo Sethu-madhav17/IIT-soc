@@ -39,6 +39,7 @@ const Publication = () => (
       <h2>Publications</h2>
       <p>
 Indian Institute Of Technology Indore      </p>
+
     </div>
 
     <div className="publication-images-grid">

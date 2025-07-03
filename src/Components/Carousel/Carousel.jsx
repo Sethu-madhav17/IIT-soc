@@ -32,7 +32,7 @@ const FancyCarousel = () => {
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              style={{ width: "100vw", height: "40vw", objectFit: "cover" }}
+              style={{ width: "100vw", height: "50vw", objectFit: "cover" }}
             />
           </div>
         ))}
