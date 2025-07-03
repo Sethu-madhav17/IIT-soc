@@ -19,7 +19,7 @@ const FancyCarousel = () => {
     speed: 800, // transition speed
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true, // show left/right buttons
+    // arrows: true, // show left/right buttons
     dots: true, // small circle indicators
     pauseOnHover: true,
   };
