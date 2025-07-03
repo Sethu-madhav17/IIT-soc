@@ -25,7 +25,7 @@ const FancyCarousel = () => {
   };
 
   return (
-    <div style={{ width: "100%",height:"fit-content", margin: "auto", paddingBottom: "2rem" }}>
+    <div style={{ width: "100%",height:"fit-content", paddingBottom: "2rem" }}>
       <Slider {...settings}>
         {images.map((src, index) => (
           <div key={index}>
