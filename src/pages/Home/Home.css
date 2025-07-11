@@ -81,24 +81,8 @@
         min-height: 80px;
       }
     }
-#bannertext{
-   
-    color: aliceblue;
-    font-size: 10rem;
-    align-items: center;
 
-}
-.angled-section {
-  height: 100px;
-  background-color: #222c45;
-  clip-path: polygon(
-    0 0,           /* Top-left */
-    100% 0,        /* Top-right */
-    100% 20%,      /* Right-bottom before dip */
-    75% 100%,      /* sharp edge bottom */
-    0 20%          /* Left-bottom before dip */
-  );
-}
+
  .mvbanner{
        
       padding: 10px;

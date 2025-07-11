@@ -13,13 +13,9 @@ function Home() {
       <Sphereglow />
         </div>
         <Introtext />
-        <div class="polygon-wrapper">
-    <div class="polygon-shadow"></div>
-    <div class="polygon-main">
-      
-      
-      
-      
+        <div className="polygon-wrapper">
+    <div className="polygon-shadow"></div>
+    <div className="polygon-main">
     </div>
   </div>
   <div className="mvbanner">
@@ -27,12 +23,12 @@ function Home() {
     <img className='bubble1' src='/Media/bubble.png'></img>
      <p id='mvtext'> Mission Vision</p>
   <div className="mvcontainer">
-      <div class="vision">
-      <span class="alpha" >Vision</span>
+      <div className="vision">
+      <span className="alpha" >Vision</span>
       <span>To promote a goodwill and a sense of pride with aim to reach on the highest rank among the top engineering and technology institutes worldwide by fostering strong relationships with its alumni, corporations, and philanthropists.</span>
      </div>
-     <div class="vision">
-      <span class="alpha">Mission</span>
+     <div className="vision">
+      <span className="alpha">Mission</span>
       <span>The mission of the Alumni and Corporate Relations office is to cultivate a vibrant and inclusive community of Alumni & Corporates, committed to deepening connections with each other.</span>
     </div>
     </div>

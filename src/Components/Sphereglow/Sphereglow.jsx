@@ -44,7 +44,7 @@ const SphereGlow = () => {
           <img
            src="/Media/iitiabhi1.jpg"
             alt="iitiabhinandan"
-            className="iitabhi1 "
+            className="iitabhi12"
           />
         </div>
       
@@ -52,4 +52,4 @@ const SphereGlow = () => {
   );
 };
 
-export default SphereGlow
+export default SphereGlow;
