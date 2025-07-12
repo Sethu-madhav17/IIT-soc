@@ -6,7 +6,6 @@ const Event = () => {
   return (
     <div>
       <Carousel/>
-      <h1>clickon magnumopus</h1>
       <Eventnav/>
     </div>
   )

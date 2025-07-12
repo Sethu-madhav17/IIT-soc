@@ -63,7 +63,9 @@ const Eventnav = () => {
   return (
     <div className="eventnav-wrapper" ref={containerRef}>
       <div className="label">{data[active].label}</div>
-
+        <div className="achievement-banner">
+          ⚠️ Tap image below to know more
+        </div>
       <div className="slider">
         <div className="arrow left" onClick={goPrev}>
           &#10094;

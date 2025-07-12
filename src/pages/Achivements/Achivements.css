@@ -6,6 +6,32 @@
   flex-direction: column;
   align-items: center;
 }
+.achievement-banner {
+  background-color: #ffe9b0;
+  color: #704214;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: fit-content;
+  animation: slideDownFade 1s ease-in-out;
+}
+
+/* Optional animation */
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .achievements-header {
   margin-bottom: 2rem;
