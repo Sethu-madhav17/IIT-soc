@@ -7,7 +7,7 @@
 
 .newsletter-plain-text {
   flex: 1; 
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('/Media/podbuild.jpg') center center / cover no-repeat;
+  background:none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,13 +16,13 @@
   text-align: center;
 }
 
-.newsletter-plain-text::before {
+/* .newsletter-plain-text::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
-}
+} */
 
 .newsletter-plain-text-content {
   position: relative;
@@ -40,7 +40,7 @@
 .newsletter-plain-text-content p {
   font-size: 1.25rem;
   margin: 0;
-  color: #f5f6f7;
+  color: #040404;
 }
 
 .newsletter-images-grid {

@@ -1,7 +1,6 @@
 import React from 'react'
 import './Home.css'
 import Typewriter from '../../Components/Typewriter/Typewriter'
-import Sphereglow from '../../Components/Sphereglow/Sphereglow'
 import Introtext from '../../Components/Introtext/Introtext'
 import Footer from '../../Components/Footer/Footer'
 import SignupUpButton from '../../Components/SignupUpButton/SignupUpButton'
@@ -9,8 +8,19 @@ import SignupUpButton from '../../Components/SignupUpButton/SignupUpButton'
 function Home() {
   return (
     <>
-    <div className="banner" >
-      <Sphereglow />
+    <div className="banner">
+    <div className="content-wrapper">
+        
+          <div className="textbox">
+            <h2 className="text ">Welcome To</h2>
+            <Typewriter />
+          </div>
+          <img
+           src="/Media/iitiabhi1.jpg"
+            alt="iitiabhinandan"
+            className="iitabhi1 "
+          />
+        </div>
         </div>
         <Introtext />
         <div className="polygon-wrapper">

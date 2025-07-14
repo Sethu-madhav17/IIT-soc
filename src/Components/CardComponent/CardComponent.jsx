@@ -17,23 +17,23 @@ const LinkedInIcon = () => (
   </svg>
 );
 
-const TwitterIcon = () => (
-  <svg
-    className="card-component__icon-social"
-    width="24"
-    height="24"
-    viewBox="0 0 120 120"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect width="120" height="120" rx="24" fill="#000" />
-    <path
-      d="M85.5 34.5H74.6L60 54.1L45.4 34.5H34.5L54.3 60L34.5 85.5H45.4L60 65.9L74.6 85.5H85.5L65.7 60L85.5 34.5Z"
-      fill="#fff"
-    />
-  </svg>
+// const TwitterIcon = () => (
+//   <svg
+//     className="card-component__icon-social"
+//     width="24"
+//     height="24"
+//     viewBox="0 0 120 120"
+//     fill="none"
+//     xmlns="http://www.w3.org/2000/svg"
+//   >
+//     <rect width="120" height="120" rx="24" fill="#000" />
+//     <path
+//       d="M85.5 34.5H74.6L60 54.1L45.4 34.5H34.5L54.3 60L34.5 85.5H45.4L60 65.9L74.6 85.5H85.5L65.7 60L85.5 34.5Z"
+//       fill="#fff"
+//     />
+//   </svg>
 
-);
+// );
 
 const CardComponent = ({
   imageSrc,
@@ -42,14 +42,10 @@ const CardComponent = ({
   description,
   instagramUrl,
   linkedinUrl,
-  twitterUrl,
+  // twitterUrl,
 }) => (
   <div className="card-component">
-    <img
-      src={imageSrc}
-      alt={imageAlt}
-      className="card-component__icon"
-    />
+    
     <div>
         <h3 className="card-component__title">{title}</h3>
     <p className="card-component__desc">{description}</p>
@@ -64,14 +60,19 @@ const CardComponent = ({
           <LinkedInIcon />
         </a>
       )}
-      {twitterUrl && (
+      {/* {twitterUrl && (
         <a href={twitterUrl} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
           <TwitterIcon />
         </a>
-      )}
+      )} */}
       </div>
     
     </div>
+    <img
+      src={imageSrc}
+      alt={imageAlt}
+      className="card-component__icon"
+    />
   </div>
 );
 

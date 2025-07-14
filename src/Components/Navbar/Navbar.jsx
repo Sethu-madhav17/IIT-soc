@@ -13,12 +13,18 @@ const navLinks = [
     ],
   },
   { name: "Team", path: "/team" },
-  { name: "Publications", path: "/publications" },
+  { name: "Publications",dropdown: [
+      { name: "Newsletter", path: "/Newsletter" },
+      { name: "Yearbook", path: "/Yearbook" },
+      { name: "Magazine", path: "/Magazine" },
+      { name: "Alumni-Achivements", path: "/Achivements" },
+    ],
+  },
   {
     name: "Events",path: "/events"
    
   },
-  { name: "Login", path: "/login" },
+  
 ];
 
 export default function Navbar() {

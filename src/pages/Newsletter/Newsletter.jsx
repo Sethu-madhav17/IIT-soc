@@ -20,7 +20,9 @@ const imageLinks = [
 
 const Newsletter = () => (
   <div className="newsletter-container">
-    
+       <img className='bubble' src='/Media/bubble.png'></img>
+        
+    <img className='bubble2' src='/Media/bubble.png'></img>
     <div className="newsletter-plain-text">
       <div className="newsletter-plain-text-content">
         <h2>Newsletter</h2>

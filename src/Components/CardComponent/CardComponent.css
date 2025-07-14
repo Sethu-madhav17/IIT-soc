@@ -1,18 +1,18 @@
 .card-component {
     display: flex;
-flex-direction: row-reverse;
+
     align-items: center;
   padding: 0.8rem;
   background: url('/Media/instant-settlement-bg.svg') no-repeat;
-  background-color: #4b7788;
- width: auto;   /* or max-width as needed */
+  background-color: #7AB2B2;
+ max-width:500px;   /* or max-width as needed */
   max-height: 1200px;
   cursor: pointer;
   border-radius: 12px;
   transition: transform 0.2s, background-image 0.2s;
   box-sizing: border-box;
   gap: 20px;
-  flex-wrap: wrap;
+  
   justify-content: center;
 }
 
@@ -36,6 +36,7 @@ flex-direction: row-reverse;
   font-style: normal;
   padding-top: 1rem;
   margin: 0;
+  max-width: 220px;
 }
 
 .card-component__desc {
@@ -47,6 +48,7 @@ flex-direction: row-reverse;
   color: #0c0c0c;
   line-height: 1.6;
   margin: 0;
+  max-width: 220px;
 }
 
 .card-component__socials {
@@ -66,9 +68,17 @@ flex-direction: row-reverse;
   transform: scale(1.18);
 }
 
-@media (max-width: 370px){
+@media (max-width: 470px){
   .card-component {
-    width: 250px;
+    flex-direction: column;
+  flex-direction: column-reverse;
+
+  }
+  
+}
+@media (min-width: 470px){
+  .card-component {
+    flex-direction: row;
 
   }
   
