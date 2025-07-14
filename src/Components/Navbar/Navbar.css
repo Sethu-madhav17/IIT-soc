@@ -234,7 +234,7 @@
     width: 100%;
   }
 }
-@media (max-width:400px) {
+@media (max-width:412px) {
   .navbar-title{
     display: none;
   }
