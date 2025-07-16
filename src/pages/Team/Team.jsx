@@ -95,13 +95,15 @@ const teamMembers = [
 ];
 
 const Team = () => (
+  <> 
   <div className="cardbox">
-    <img className='bubble' src='/Media/bubble.png'></img>
+    <img className='bubble31' src='/Media/bubble.png'></img>
         
-    <img className='bubble2' src='/Media/bubble.png'></img>
-    <h1 style={{ textAlign: "center", marginBottom: "32px" , fontWeight:"bold" ,backgroundColor:"white" ,width:"fit-content",padding:"10px" }}>Team Alumni Cell</h1>
+    <img className='bubble21' src='/Media/bubble.png'></img>
+    <h1 style={{ textAlign: "center", marginBottom: "32px" , fontWeight:"bold" ,width:"fit-content",padding:"10px", zIndex: 10  }}>Team Alumni Cell</h1>
      <div className="cards">
         <div className="card" >
+          <img className='bubble21' src='/Media/bubble.png'></img>
     {teamMembers.map((member, idx) => (
       <CardComponent key={idx} {...member} />
     ))}
@@ -110,6 +112,8 @@ const Team = () => (
   </div>
   
   </div>
+  </>
+ 
 );
 
 export default Team;

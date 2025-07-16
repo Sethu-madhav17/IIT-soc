@@ -1,9 +1,17 @@
-/* /* Optional: Fancy dots and arrow styles */
+/* Increase dot size */
 .slick-dots li button:before {
-  color: #20639b; /* Blue dot */
-  font-size: 19px;
-
+  font-size: 20px; /* Default is 6px, you can increase as needed */
+  color: #75c7bc;
+  opacity: 1;
+  margin-top: 3.5rem;
 }
+
+/* Active dot style */
+.slick-dots li.slick-active button:before {
+  color: #020202;
+  font-size: 25px;
+}
+
 
 .slick-prev:before,
 .slick-next:before {
@@ -12,3 +20,4 @@
   position: absolute;
   z-index: 4;
 }
+

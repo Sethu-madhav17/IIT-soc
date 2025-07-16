@@ -1,92 +1,56 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import "./Eventnav.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const data = [
-  { image: "/Media/mopus.png", link: "/Magnumopus", label: "MagnumOpus" },
   { image: "/Media/are.png", link: "/Reunion", label: "Reunion" },
   { image: "/Media/convo.jpg", link: "/Convocation", label: "Convocation" },
-  { image: "/Media/cmeet.jpg", link: "/Meets", label: "Chapter/Alumni Meet" },
+  { image: "/Media/cmeet.jpg", link: "/Meets", label: "Alumni Meet" },
+  { image: "/Media/mopus.png", link: "/Magnumopus", label: "MagnumOpus" },
   { image: "/Media/gallery.jpg", link: "/Gallery", label: "Gallery" },
 ];
 
 const Eventnav = () => {
-  const containerRef = useRef(null);
-  const [active, setActive] = useState(3);
-
-  const loadShow = () => {
-    const items = containerRef.current.querySelectorAll(".slider .item");
-
-    const translateDistance = 180;
-    const scaleFactor = 0.15;
-
-    items.forEach((item, index) => {
-      item.style.transition = "transform 0.5s, filter 0.5s, opacity 0.5s";
-
-      let relativePos = index - active;
-      if (relativePos > data.length / 2) {
-        relativePos -= data.length;
-      } else if (relativePos < -data.length / 2) {
-        relativePos += data.length;
-      }
-
-      if (index === active) {
-        item.style.transform = "none";
-        item.style.zIndex = 1;
-        item.style.filter = "none";
-        item.style.opacity = 1;
-      } else if (relativePos > 0) {
-        const stt = relativePos;
-        item.style.transform = `translateX(${translateDistance * stt}px) scale(${1 - scaleFactor * stt}) perspective(100px) rotateY(0deg)`;
-        item.style.zIndex = -stt;
-        item.style.filter = "blur(10px)";
-        item.style.opacity = stt > 2 ? 0 : 0.6;
-      } else {
-        const stt = -relativePos;
-        item.style.transform = `translateX(${-translateDistance * stt}px) scale(${1 - scaleFactor * stt}) perspective(100px) rotateY(0deg)`;
-        item.style.zIndex = -stt;
-        item.style.filter = "blur(10px)";
-        item.style.opacity = stt > 2 ? 0 : 0.6;
-      }
-    });
+  const settings = {
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    speed: 5000,
+    responsive: [
+      {
+        breakpoint: 350,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      
+      
+    ],
   };
 
-  useEffect(() => {
-    loadShow();
-  }, [active]);
-
-  const goPrev = () =>
-    setActive((prev) => (prev === 0 ? data.length - 1 : prev - 1));
-  const goNext = () =>
-    setActive((prev) => (prev === data.length - 1 ? 0 : prev + 1));
-
   return (
-    <div className="eventnav-wrapper" ref={containerRef}>
-      <div className="label">{data[active].label}</div>
-        <div className="achievement-banner">
-          ⚠️ Tap image below to know more
-        </div>
-      <div className="slider">
-        <div className="arrow left" onClick={goPrev}>
-          &#10094;
-        </div>
-
+    <div className="eventnav-wrapper">
+      <div className="achievement-banner">⚠️ Tap image below to know more</div>
+      <Slider {...settings}>
         {data.map((item, index) => (
-          <div className="item" key={index} onClick={() => setActive(index)}>
+          <div key={index} className="event-card1">
             <Link to={item.link}>
-              <img src={item.image} alt={`Image ${index + 1}`} />
+              <img src={item.image} alt={item.label} />
+              <p className="event-label">{item.label}</p>
             </Link>
           </div>
         ))}
-
-        <div className="arrow right" onClick={goNext}>
-          &#10095;
-        </div>
-      </div>
+      </Slider>
     </div>
   );
 };
 
 export default Eventnav;
+
 
 

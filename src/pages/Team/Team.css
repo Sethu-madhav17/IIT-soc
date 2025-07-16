@@ -9,33 +9,31 @@
  /* height: 100vh; */
  /* justify-content: center; */
 }
-.bubble2{
+.bubble21{
   display: flex;
   position: absolute;
   right: 0;
   justify-items: left;
   bottom: 0;
-  width:20vw
+  width:400px;
 }
-.bubble3{
+.bubble31{
   display: flex;
   position: absolute;
   left: 0;
   justify-items: right;
-  bottom: 0;
-  width:20vw
-}
+  top: 0;
+width:400px;}
 .card{
-  width: fit-content;
+  /* width: fit-content; */
   max-width: 1500px;
-
   align-content: center;
  position: relative;
   display: flex;
   flex-direction: row;
     /* display: grid; */
     flex-wrap: wrap;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
  align-items: center;
  justify-content: center;
   gap: 3.5rem;

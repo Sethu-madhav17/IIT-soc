@@ -7,6 +7,7 @@ const Event = () => {
     <div>
       <Carousel/>
       <Eventnav/>
+      
     </div>
   )
 }

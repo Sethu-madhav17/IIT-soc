@@ -13,7 +13,7 @@ const navLinks = [
     ],
   },
   { name: "Team", path: "/team" },
-  { name: "Publications",dropdown: [
+  { name: "Publications", dropdown: [
       { name: "Newsletter", path: "/Newsletter" },
       { name: "Yearbook", path: "/Yearbook" },
       { name: "Magazine", path: "/Magazine" },
