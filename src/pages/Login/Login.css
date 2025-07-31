@@ -1,5 +1,5 @@
-/* src/pages/Signup/Signup.css */
-.signup-container {
+/* src/pages/Login/Login.css */
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,17 +8,17 @@
   padding: 20px;
 }
 
-.signup-form {
+.login-form {
   background-color: #fff;
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 450px; /* Slightly wider for more inputs */
+  max-width: 400px;
   text-align: center;
 }
 
-.signup-form h2 {
+.login-form h2 {
   margin-bottom: 30px;
   color: #333;
   font-size: 28px;
@@ -37,20 +37,19 @@
 }
 
 .form-group input[type="text"],
-.form-group input[type="email"],
 .form-group input[type="password"] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 16px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding in width */
 }
 
-.signup-form button {
+.login-form button {
   width: 100%;
   padding: 12px;
-  background-color: #28a745; /* Green for signup */
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 6px;
@@ -60,11 +59,11 @@
   margin-top: 10px;
 }
 
-.signup-form button:hover {
-  background-color: #218838;
+.login-form button:hover {
+  background-color: #0056b3;
 }
 
-.signup-form button:disabled {
+.login-form button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
@@ -75,18 +74,18 @@
   font-size: 14px;
 }
 
-.login-link {
+.signup-link {
   margin-top: 20px;
   font-size: 15px;
   color: #666;
 }
 
-.login-link span {
-  color: #28a745;
+.signup-link span {
+  color: #007bff;
   cursor: pointer;
   font-weight: bold;
 }
 
-.login-link span:hover {
+.signup-link span:hover {
   text-decoration: underline;
 }

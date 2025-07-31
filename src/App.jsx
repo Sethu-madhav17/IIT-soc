@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import Footer from './Components/Footer/Footer';
 import Team from './pages/Team/Team';
 import Signup from './pages/Signup/Signup';
+import Login from './pages/Login/Login'; 
 import Magazine from './pages/Magazine/Magazine';
 import Newsletter from './pages/Newsletter/Newsletter';
 import Achivements from './pages/Achivements/Achivements';
@@ -16,12 +17,13 @@ import Magnumopus from './pages/Magnumopus/Magnumopus';
 function App() {
 
   return (
-     <><Navbar />
-       
+    <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/alumni" element={<div>Alumni Page</div>} />
-        <Route path="/Signup" element={<Signup/>} />
+        <Route path="/Signup" element={<Signup/>} /> 
+        <Route path="/login" element={<Login />} />   
         <Route path="/team" element={<Team/>} />
         <Route path="/Magazine" element={<Magazine />} />
         <Route path="/Newsletter" element={<Newsletter />} />
@@ -31,10 +33,7 @@ function App() {
         <Route path="/events/webinars" element={<div>Webinars Page</div>} />
       </Routes>
       <Footer/>
-      </>
-      
-     
-    
+    </>
   )
 }
 

@@ -1,119 +1,118 @@
-import React from "react";
+// src/Team.jsx
+
+import React, { useEffect, useState } from "react";
 import CardComponent from "../../Components/CardComponent/CardComponent";
-import "./Team.css"
-import member1 from "/Media/ansh.png"; 
-import member2 from "/Media/dadhich.jpg";
-import member3 from "/Media/vedansh.jpg";
-import member4 from "/Media/anima.jpg";
-import member5 from "/Media/yashasvi.jpg";
-import member6 from "/Media/raj.jpg";
-import member7 from "/Media/garvith.jpg";
-import member8 from "/Media/keshvi.jpg";
-import member9 from "/Media/ak.jpg";
+import "./Team.css";
 
-const teamMembers = [
-  {
-    imageSrc: member1, 
-    imageAlt: "Ansh Kyal",
-    title: "Ansh Kyal",
-    description: "Head Alumni Cell",
-    instagramUrl: "https://www.instagram.com/ansh_kyal29/",
-    linkedinUrl: "https://www.linkedin.com/in/anshkyal/",
-    
-  },
-  {
-    imageSrc: member2,
-    imageAlt: "Mohak Dadhich",
-    title: "Mohak Dadhich",
-    description: "Co-Head Alumni Cell",
-    instagramUrl: "https://www.instagram.com/dadhich.mohak/",
-    linkedinUrl: "https://www.linkedin.com/in/dadhichmohak/",
-    
-  },
-   {
-    imageSrc: member3,
-    imageAlt: "Vedansh Shrivastava",
-    title: "Vedansh Shrivastava",
-    description: "Aram Head",
-    instagramUrl: "https://www.instagram.com/_vedansh.02_/",
-    linkedinUrl: "https://www.linkedin.com/in/explorerr/",
-    
-  },
-   {
-    imageSrc: member4,
-    imageAlt: "Anima",
-    title: "Anima",
-    description: "News letter Planning Coordinator",
-    instagramUrl: "https://www.instagram.com/de_anima_ii/",
-    linkedinUrl: "https://www.linkedin.com/in/anima-singh-41133a167/",
-    
-  },
-   {
-    imageSrc: member5,
-    imageAlt: "Yashasvi shukla",
-    title: "Yashasvi shukla",
-    description: "Webdev Head",
-    instagramUrl: "https://www.instagram.com/_.yashasvi.__/",
-    linkedinUrl: "https://www.linkedin.com/in/yashasvi-shukla-49882030a/",
-    
-  },
-   {
-    imageSrc: member6,
-    imageAlt: "Kavyansh Raj",
-    title: "Kavyansh Raj",
-    description: "Newsletter Coordinator",
-    instagramUrl: "https://www.instagram.com/real_kavyansh/",
-    linkedinUrl: "https://www.linkedin.com/in/kavyanshsingh/",
-    
-  },
-   {
-    imageSrc: member7,
-    imageAlt: "Garvit Mathur",
-    title: "Garvit Mathur",
-    description: "Design Head",
-    instagramUrl: "https://www.instagram.com/garvitmathur05/",
-    linkedinUrl: "https://www.linkedin.com/in/garvit-mathur-31552b33b/",
-    
-  },
-   {
-    imageSrc: member8,
-    imageAlt: "Keshvi Lakhotia",
-    title: "Keshvi Lakhotia",
-    description: "logistic Head",
-    instagramUrl: "https://www.instagram.com/keshvi_lakhotia/",
-    linkedinUrl: "https://www.linkedin.com/in/keshvi-lakhotia/",
-    
-  }, {
-    imageSrc: member9,
-    imageAlt: "Anushka Krishnan",
-    title: "Anushka Krishnan",
-    description: "Content Head",
-    instagramUrl: "https://www.instagram.com/itsanushkakrishan/",
-    linkedinUrl: "https://www.linkedin.com/in/anushka-krishan-65689331a/",
-    
-  },
-];
+// IMPORTANT: Remove all hardcoded image imports and the static teamMembers array
+// import member1 from "/Media/ansh.png";
+// import member2 from "/Media/dadhich.jpg";
+// ... (etc.) ...
+// const teamMembers = [...]; // This entire array should be removed
 
-const Team = () => (
-  <> 
-  <div className="cardbox">
-    <img className='bubble31' src='/Media/bubble.png'></img>
+const Team = () => {
+  const [teamMembers, setTeamMembers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchTeamMembers = async () => {
+      try {
+        const backendUrl = "http://127.0.0.1:8000"; // Your Django backend URL
         
-    <img className='bubble21' src='/Media/bubble.png'></img>
-    <h1 style={{ textAlign: "center", marginBottom: "32px" , fontWeight:"bold" ,width:"fit-content",padding:"10px", zIndex: 10  }}>Team Alumni Cell</h1>
-     <div className="cards">
-        <div className="card" >
-          <img className='bubble21' src='/Media/bubble.png'></img>
-    {teamMembers.map((member, idx) => (
-      <CardComponent key={idx} {...member} />
-    ))}
-  </div>
-  
-  </div>
-  
-  </div>
-  </>
- 
-);
+        // Retrieve the authentication token from localStorage
+        // IMPORTANT: Replace 'authToken' with the actual key you use to store the token
+        const authToken = localStorage.getItem('authToken'); 
+
+        if (!authToken) {
+            setError("Authentication token not found. Please log in.");
+            setLoading(false);
+            return; // Stop execution if no token
+        }
+
+        const response = await fetch(`${backendUrl}/api/team/members/`, { // Correct API endpoint
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Token ${authToken}` // Include the authentication token
+          },
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.detail || `Failed to fetch team members (Status: ${response.status})`);
+        }
+
+        const data = await response.json();
+        setTeamMembers(data);
+      } catch (err) {
+        setError(err.message);
+        console.error("Error fetching team members:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTeamMembers();
+  }, []); // Empty dependency array means this runs once on component mount
+
+  if (loading) {
+    return (
+      <div className="cardbox">
+        <h1 style={{ textAlign: "center", marginBottom: "32px", fontWeight: "bold", width: "fit-content", padding: "10px", zIndex: 10 }}>Team Alumni Cell</h1>
+        <p>Loading team members...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="cardbox">
+        <h1 style={{ textAlign: "center", marginBottom: "32px", fontWeight: "bold", width: "fit-content", padding: "10px", zIndex: 10 }}>Team Alumni Cell</h1>
+        <p style={{ color: "red" }}>Error: {error}</p>
+        <p>Please ensure you are logged in and have an active authentication token.</p>
+      </div>
+    );
+  }
+
+  // Ensure teamMembers is an array before mapping
+  if (!Array.isArray(teamMembers) || teamMembers.length === 0) {
+    return (
+      <div className="cardbox">
+        <h1 style={{ textAlign: "center", marginBottom: "32px", fontWeight: "bold", width: "fit-content", padding: "10px", zIndex: 10 }}>Team Alumni Cell</h1>
+        <p>No team members found.</p>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div className="cardbox">
+        {/* Bubbles are global decorative elements, usually not inside card div */}
+        <img className='bubble31' src='/Media/bubble.png' alt="Decorative bubble" />
+        <img className='bubble21' src='/Media/bubble.png' alt="Decorative bubble" />
+        
+        <h1 style={{ textAlign: "center", marginBottom: "32px" , fontWeight:"bold" ,width:"fit-content",padding:"10px", zIndex: 10 }}>Team Alumni Cell</h1>
+        
+        <div className="cards">
+          {/* Removed the redundant bubble21 image here */}
+          <div className="card" >
+            {teamMembers.map((member) => (
+              <CardComponent
+                key={member.id} // Use member.id from API for unique key
+                imageSrc={member.imageSrc || '/Media/default_profile.png'} // Use imageSrc from API, with fallback
+                imageAlt={member.imageAlt}
+                title={member.title}
+                description={member.description}
+                instagramUrl={member.instagram_url} // Backend uses snake_case, ensure your CardComponent accepts this or map it
+                linkedinUrl={member.linkedin_url}   // Backend uses snake_case, ensure your CardComponent accepts this or map it
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Team;
