@@ -19,7 +19,7 @@ function Home() {
   useEffect(() => {
     const fetchHomePageData = async () => {
       try {
-        const backendUrl = "http://127.0.0.1:8000"; // Your Django backend URL
+        const backendUrl = import.meta.env.VITE_API_URL; // Your Django backend URL
         const response = await fetch(`${backendUrl}/api/home/`); // Endpoint for home page content
 
         if (!response.ok) {
