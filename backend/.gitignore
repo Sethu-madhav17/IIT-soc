@@ -1,0 +1,17 @@
+# Python / Django
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
+
+# Database
+db.sqlite3
+
+# Your .env file with sensitive data
+.env
+
+# Uploaded media files
+media/
